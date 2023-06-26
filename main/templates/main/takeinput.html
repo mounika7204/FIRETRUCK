@@ -6,17 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.0.2/dist/model-viewer.min.js"></script>
+    <title>Document</title>
+    <style>
+    body {
+        align-items: center;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      .form {
+        background-color: #15172b;
+        border-radius: 5px;
+        box-sizing: border-box;
+        height: 500px;
+        padding: 20px;
+        width: 400px;
+      }
+      
+      .title {
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: 30px;
+      }
+      
+      .subtitle {
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      
+      .input-container {
+        height: 50px;
+        position: relative;
+        width: 100%;
+      }
+   
+      .input {
+        background-color: #303245;
+        border-radius: 4px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        font-size: 18px;
+        height: 100%;
+        outline: 0;
+        padding: 4px 20px 0;
+        width: 100%;
+      }
+    
+      .placeholder {
+        color: #65657b;
+        font-family: sans-serif;
+        left: 20px;
+        line-height: 14px;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        transition: transform 200ms, color 200ms;
+        top: 20px;
+      }
+
+     
+    </style>
 </head>
 <body>
     <form method="POST">
         {% csrf_token %}
-        <label for="Source">Source:</label><br><br>
-        <input type="text" id="Source" name="Source"><br><br>
-        <label for="Destination">Destination:</label><br><br>
-        <input type="text" id="Destination" name="Destination"><br><br>
-        <label for="Dict_Node">Dictionary of Nodes:</label><br><br>
-        <textarea id="Dict_Node" name="Dict_Node" rows="4" cols="50"></textarea><br><br>
+        <div class="form">
+            <div class="title">Welcome</div>
+            <div class="subtitle">Give Input</div>
+            <div class="input-container ic1">
+    
+        <label for="Source"><p style="color:#FFFFFF">Source</p></label>
+        <input type="text" id="Source" name="Source">
+        <label for="Destination"><p style="color:#FFFFFF">Destination</p></label>
+        <input type="text" id="Destination" name="Destination">
+        <label for="Dict_Node"><p style="color:#FFFFFF">Dictionary of Nodes</p></label>
+        <textarea id="Dict_Node" name="Dict_Node" rows="2" cols="35"></textarea><br><br>
         <input type="submit" value="Submit">
+    </div>
+
       </form>
+    </div>
 </body>
 </html>

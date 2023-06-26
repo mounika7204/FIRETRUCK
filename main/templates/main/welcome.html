@@ -6,9 +6,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <style>
+        .name img{
+            align-items: center;
+            margin-left: 200px;
+            overflow-x:hidden;
+        }
+        .inner{
+            margin: 100px auto;
+            height:600px;
+            width:50%;
+            /* margin-left: 390px; */
+            margin-bottom: 10px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-image: url("https://img.freepik.com/premium-vector/fire-truck-isolated-black-background-poster-tshirt-print-business-element_500504-487.jpg");
+        }
+    </style>
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+        .navbar{
+            color: white;
+        }
+        .navbar h1{
+            margin-left: 620px;
+            font-size: 50px;
+
+        }
+        .btn{
+            /* margin-top: 400px; */
+            margin-left: 300px;
+        }
+        .start{
+            margin-right: 80px;
+            height: 100px;
+            width: 160px;
+            background-color: green;
+        }
+        .help{
+            margin-left: 130px;
+            height: 100px;
+            width: 160px;
+            background-color: grey;
+        }
+        .quit{
+            margin-left: 230px;
+            height: 100px;
+            width: 160px;
+            background-color: red;
+        }
+        model-viewer{
+            height:800px;
+            width:900px;
+            margin:0 auto;
+        }
+        .navbar img{
+            height:600px;
+            width:50%;
+            margin-left: 390px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <p>To give input please click <a href="{% url 'mainfunction' %}">here</a></p>
+
+
+    <div class="navbar">
+        <h1>FIRETRUCK</h1>
+        <!-- <model-viewer src="{% static 'scene.gltf' %}" camera-controls></model-viewer> -->
+        <div class = "name">
+            <div data-tilt class ="inner">
+        
+            </div>
+        
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+        <!-- <model-viewer src="" camera-controls></model-viewer> -->
+        <!-- <img src="https://img.freepik.com/premium-vector/fire-truck-isolated-black-background-poster-tshirt-print-business-element_500504-487.jpg"> -->
+        <div class ="btn">
+        <button class="start"><a href="{% url 'mainfunction' %}">Start</a></button>
+        <button class="help">HELP</button>
+        <button class="quit" onClick = "window.close()">QUIT</button>
+        </div>
+    </div>
 </body>
 </html>
